@@ -20,7 +20,6 @@ const searchRepos = async (input) => {
       repos = [...repos, ...res.data.items]
 
       const count = res.data.total_count
-      console.log(count)
       return count > 9 ? 9 : count
     })
     .catch(e => console.log(e.response.data.message))
