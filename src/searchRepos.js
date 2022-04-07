@@ -37,13 +37,11 @@ const searchRepos = async () => {
     promiseArray.push(page)
   }
 
-  await Promise.all(promiseArray).then((items) => {
+  await Promise.all(promiseArray)
+  .then((items) => {
     repos = [...repos, ...items.flat()]
-    // console.log(items.length);
   });
 
-  // console.log(repos)
-  console.log(repos.length)
   return repos
 }
 
