@@ -13,6 +13,7 @@ const countLanguages = (languages) => {
   return counts
 }
 
+const sortLanguages = (languages) => Object.entries(languages).sort((a, b) => b[1] - a[1]);
 
 const getLanguages = (reposData) => {
   const rawLanguages = reposData.reduce((acc, i) => {
@@ -24,11 +25,14 @@ const getLanguages = (reposData) => {
 
   const languagesWithCounts = countLanguages(cleanedLanguages)
 
-  return languagesWithCounts
+  const sortedLanguages = sortLanguages(languagesWithCounts)
+
+  return sortedLanguages
 }
 
 module.exports = {
   getLanguages,
   cleanupLanguages,
-  countLanguages
+  countLanguages,
+  sortLanguages
 }
