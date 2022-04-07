@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const searchRepos = async () => {
+const searchRepos = async (input) => {
 
   let repos = []
 
@@ -8,9 +8,9 @@ const searchRepos = async () => {
     url: 'https://api.github.com/search/repositories',
     method: 'get',
     params: {
-      q: "shampoo",
+      q: `"${input}"+in:description`,
       page: 1,
-      per_page: 1
+      per_page: 100
     }
   }
 

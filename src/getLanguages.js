@@ -1,15 +1,12 @@
-
 const cleanupLanguages = (languages) => languages.filter(l => l != null && l != '')
 
 const countLanguages = (languages) => {
-
   const counts = {};
 
   for (const num of languages) {
     counts[num] = counts[num] ? counts[num] + 1 : 1;
   }
 
-  console.log(counts)
   return counts
 }
 

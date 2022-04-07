@@ -2,9 +2,9 @@ const { searchRepos } = require('./src/searchRepos')
 const { getLanguages } = require('./src/getLanguages')
 const { printResults } = require('./src/printResults')
 
-const countReposLanguages = async () => {
+const countReposLanguages = async (input) => {
 
-  const reposData = await searchRepos()
+  const reposData = await searchRepos(input)
 
   const languagesWithCounts = getLanguages(reposData)
 
@@ -13,5 +13,5 @@ const countReposLanguages = async () => {
   return result
 }
 
-countReposLanguages()
+countReposLanguages('shampoo')
 
