@@ -27,6 +27,7 @@ const searchRepos = async (input) => {
 
   let promiseArray = []
 
+  //Getting the rest of the results up to 9 more pages
   for (let i = 1; i < numberOfPages + 1; i++) {
     const newConfig = { ...config, params: { ...config.params, page: i } }
 
