@@ -6,13 +6,20 @@ const { printResults } = require('./src/printResults')
 const countReposLanguages = async () => {
   const input = prompt('Enter the search phrase: ');
 
+  if (!input) {
+    console.error('\nYou must provide a search term! Try again.')
+    return 1
+  }
+
+  console.log('Searching... (it may take a few seconds)')
+
   const reposData = await searchRepos(input)
 
   const languagesWithCounts = getLanguages(reposData)
 
-  const result = printResults(languagesWithCounts)
+  const results = printResults(languagesWithCounts)
 
-  return result
+  return results
 }
 
 countReposLanguages()
