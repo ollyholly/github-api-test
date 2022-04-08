@@ -8,14 +8,14 @@ cd github-api-test
 npm install
 ```
 
-<br><br>
+<br>
 
 ## How to Use
 
-In command line run `npm start`
+In command line run `npm start`.<br>
 Type the search term and press enter.
 
-<br><br>
+<br>
 
 ## Things I'd implement if I had more time 🚧
 
