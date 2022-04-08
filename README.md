@@ -17,7 +17,7 @@ Type the search term and press enter.
 
 <br>
 
-## Things I'd implement if I had more time 🚧
+## Things I'd implement if I had more time 
 
 - unit tests
 - better CLI UX using Commander or Inquirer
